@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/drawable-xxhdpi-v4/ic_launcher.png",
+        "source": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/src/main/res/drawable-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/drawable-xxhdpi-v4/ic_arrow_back_black_24dp.png",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/59659fce6c491396de17dbc6db325db9/res/drawable-xxhdpi-v4/ic_arrow_back_black_24dp.png"
+    }
+]

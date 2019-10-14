@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/menu/main_menu.xml",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/23f14144545e58654eee317e2c0624da/res/menu/main_menu.xml"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/menu/menu_server.xml",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/7097e2eda371aceb1834007988e4dd3f/res/menu/menu_server.xml"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/menu/ftc_robot_controller.xml",
+        "source": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/src/main/res/menu/ftc_robot_controller.xml"
+    }
+]

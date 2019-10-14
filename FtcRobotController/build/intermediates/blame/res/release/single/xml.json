@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/xml/builtinwebcamcalibrations.xml",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/59659fce6c491396de17dbc6db325db9/res/xml/builtinwebcamcalibrations.xml"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/xml/app_settings.xml",
+        "source": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/src/main/res/xml/app_settings.xml"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/xml/pushbotsens.xml",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/xml/pushbotsens.xml"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/xml/squarebot.xml",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/xml/squarebot.xml"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/xml/device_filter.xml",
+        "source": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/src/main/res/xml/device_filter.xml"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/xml/ftc_about_activity.xml",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/xml/ftc_about_activity.xml"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/xml/teamwebcamcalibrations.xml",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/59659fce6c491396de17dbc6db325db9/res/xml/teamwebcamcalibrations.xml"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/xml/pushbot.xml",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/xml/pushbot.xml"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/xml/rev_scoot.xml",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/xml/rev_scoot.xml"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/xml/maxmodules.xml",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/xml/maxmodules.xml"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/xml/ftc_about_activity_rc.xml",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/xml/ftc_about_activity_rc.xml"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/xml/k9usbbot.xml",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/xml/k9usbbot.xml"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/xml/k9legacybot.xml",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/xml/k9legacybot.xml"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/xml/advanced_rc_settings.xml",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/xml/advanced_rc_settings.xml"
+    }
+]

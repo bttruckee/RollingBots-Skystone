@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/drawable/feedback_shape_orange.xml",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/59659fce6c491396de17dbc6db325db9/res/drawable/feedback_shape_orange.xml"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/drawable/skystone_background.webp",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/59659fce6c491396de17dbc6db325db9/res/drawable/skystone_background.webp"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/drawable/notification_icon_background.xml",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/e8774f8c9e37599168cd356411dbd206/res/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/drawable/icon_robotcontroller.png",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/23f14144545e58654eee317e2c0624da/res/drawable/icon_robotcontroller.png"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/drawable/notification_tile_bg.xml",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/e8774f8c9e37599168cd356411dbd206/res/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/drawable/notification_bg_low.xml",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/e8774f8c9e37599168cd356411dbd206/res/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/drawable/button_shape.xml",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/drawable/button_shape.xml"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/drawable/notification_bg.xml",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/e8774f8c9e37599168cd356411dbd206/res/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/drawable/icon_menu.png",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/23f14144545e58654eee317e2c0624da/res/drawable/icon_menu.png"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/drawable/black_border.xml",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/7097e2eda371aceb1834007988e4dd3f/res/drawable/black_border.xml"
+    }
+]

@@ -1,0 +1,126 @@
+[
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/ss_mf_fail.wav",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/raw/ss_mf_fail.wav"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/ss_laser_burst.wav",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/raw/ss_laser_burst.wav"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/ss_mine.wav",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/raw/ss_mine.wav"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/errormessage.wav",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/raw/errormessage.wav"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/ss_alarm.wav",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/raw/ss_alarm.wav"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/ss_siren.wav",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/raw/ss_siren.wav"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/ss_darth_vader.wav",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/raw/ss_darth_vader.wav"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/ss_wookie.wav",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/raw/ss_wookie.wav"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/warningmessage.wav",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/raw/warningmessage.wav"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/simple_vertex_shader.glsl",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/59659fce6c491396de17dbc6db325db9/res/raw/simple_vertex_shader.glsl"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/cube_mesh_fragment_shader.glsl",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/59659fce6c491396de17dbc6db325db9/res/raw/cube_mesh_fragment_shader.glsl"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/ss_light_saber_short.wav",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/raw/ss_light_saber_short.wav"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/ss_light_speed.wav",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/raw/ss_light_speed.wav"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/ss_roger_roger.wav",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/raw/ss_roger_roger.wav"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/cube_mesh_vertex_shader.glsl",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/59659fce6c491396de17dbc6db325db9/res/raw/cube_mesh_vertex_shader.glsl"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/chimeconnect.wav",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/raw/chimeconnect.wav"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/texture_fragment_shader.glsl",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/59659fce6c491396de17dbc6db325db9/res/raw/texture_fragment_shader.glsl"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/ss_light_saber.wav",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/raw/ss_light_saber.wav"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/ss_bb8_down.wav",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/raw/ss_bb8_down.wav"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/ss_light_saber_long.wav",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/raw/ss_light_saber_long.wav"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/nxtstartupsound.wav",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/raw/nxtstartupsound.wav"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/ss_fly_by.wav",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/raw/ss_fly_by.wav"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/ss_laser.wav",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/raw/ss_laser.wav"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/color_fragment_shader.glsl",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/59659fce6c491396de17dbc6db325db9/res/raw/color_fragment_shader.glsl"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/chimedisconnect.wav",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/raw/chimedisconnect.wav"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/gold.wav",
+        "source": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/src/main/res/raw/gold.wav"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/ss_r2d2_up.wav",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/raw/ss_r2d2_up.wav"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/ss_power_up.wav",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/raw/ss_power_up.wav"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/ss_bb8_up.wav",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/128776fea20f50445f0580341c36371b/res/raw/ss_bb8_up.wav"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/silver.wav",
+        "source": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/src/main/res/raw/silver.wav"
+    },
+    {
+        "merged": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/FtcRobotController/build/intermediates/res/merged/release/raw/texture_vertex_shader.glsl",
+        "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/59659fce6c491396de17dbc6db325db9/res/raw/texture_vertex_shader.glsl"
+    }
+]
