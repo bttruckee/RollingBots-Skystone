@@ -29,12 +29,9 @@
 
 package org.firstinspires.ftc.teamcode;
 
-import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
-import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.util.ElapsedTime;
-import com.qualcomm.robotcore.util.Range;
 
 /**
  * This file contains an example of an iterative (Non-Linear) "OpMode".
@@ -50,8 +47,8 @@ import com.qualcomm.robotcore.util.Range;
  * Remove or comment out the @Disabled line to add this opmode to the Driver Station OpMode list
  */
 
-@TeleOp(name="Rainbow Road", group="Iterative Opmode")
-public class AnnikaandJacobareBoss extends OpMode
+@TeleOp(name="Motor Test", group="Iterative Opmode")
+public class MotorTest extends OpMode
 {
     // Declare runtime.
     private ElapsedTime runtime = new ElapsedTime();
@@ -94,41 +91,11 @@ public class AnnikaandJacobareBoss extends OpMode
      */
     @Override
     public void loop() {
-        //Determine forward speed
-        jack.setForwardSpeed(-gamepad1.left_stick_y);
-
-        //Determine turning speed, overwriting forward speed if applicable
-        if(gamepad1.right_stick_x != 0)
-        {
-            jack.setTurnSpeed(gamepad1.right_stick_x);
-        }
-
-        //Determine strafe speed, overwriting forward and turning speed if applicable
-        if(gamepad1.right_trigger != 0 || gamepad1.left_trigger != 0)
-        {
-            jack.setStrafeSpeed(gamepad1.left_trigger - gamepad1.right_trigger);
-        }
-
-        // Send calculated power to wheels
-        jack.move();
-
-        //Sets the groundLock servo
-        if(gamepad1.a || gamepad1.b)
-        {
-            jack.setServo(Annika.ServoIndexes.get("groundLock"), gamepad1.a);
-        }
-
-        //Sets the wrist servo
-        if(gamepad2.left_bumper || gamepad2.right_bumper)
-        {
-            jack.setServo(Annika.ServoIndexes.get("wrist"), gamepad2.left_bumper);
-        }
-
-        //Sets the finger servo
-        if(gamepad2.a || gamepad2.b)
-        {
-            jack.setServo(Annika.ServoIndexes.get("finger"), gamepad2.a);
-        }
+        /*
+        Wheel Motor Test
+        left front, right front, left rear, right rear
+         */
+        jack.testWheels(gamepad1.left_stick_y, gamepad1.right_stick_y, gamepad1.left_trigger, gamepad1.right_trigger);
 
         // Show the elapsed game time and wheel power.
         telemetry.addData("Status", "Run Time: " + runtime.toString());
