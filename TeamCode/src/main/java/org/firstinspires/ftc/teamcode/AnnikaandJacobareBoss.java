@@ -112,6 +112,9 @@ public class AnnikaandJacobareBoss extends OpMode
         // Send calculated power to wheels
         jack.move();
 
+        //Moves the arm up and down
+        jack.moveArm(0.5 * gamepad2.right_stick_y);
+
         //Sets the groundLock servo
         if(gamepad1.a || gamepad1.b)
         {
@@ -132,7 +135,8 @@ public class AnnikaandJacobareBoss extends OpMode
 
         // Show the elapsed game time and wheel power.
         telemetry.addData("Status", "Run Time: " + runtime.toString());
-        telemetry.addData("Motors", "forward (%.2f), backward (%.2f)", gamepad1.left_stick_y, gamepad1.right_stick_x, gamepad1.right_trigger - gamepad1.left_trigger);
+        telemetry.addData("Wheels", "forward (%.2f), backward (%.2f)", gamepad1.left_stick_y, gamepad1.right_stick_x, gamepad1.right_trigger - gamepad1.left_trigger);
+        telemetry.addData("Arm", 0.5 * gamepad2.right_stick_y);
     }
 
     /*

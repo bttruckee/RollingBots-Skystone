@@ -58,7 +58,6 @@ import org.firstinspires.ftc.robotcontroller.external.samples.HardwarePushbot;
  */
 
 @Autonomous(name="Luigi Circuit", group="Pushbot")
-@Disabled
 public class Jacobie extends LinearOpMode {
 
     /* Declare OpMode members. */
@@ -124,7 +123,7 @@ public class Jacobie extends LinearOpMode {
             telemetry.update();
         }
 
-        // Step 4:  Stop and close the claw.
+        // Step 5:  Stop and close the claw.
         jack.setForwardSpeed(0);
         jack.move();
         jack.setServo(Annika.ServoIndexes.get("finger"),true);

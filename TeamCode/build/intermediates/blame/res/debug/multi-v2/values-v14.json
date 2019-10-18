@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/jdickerman/Desktop/projects/Robotics/RollingBots-Skystone/TeamCode/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v14/values-v14.xml",
+            "outputFile": "/Users/jdickerman/StudioProjects/RollingBots-Skystone/TeamCode/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v14/values-v14.xml",
             "map": [
                 {
-                    "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/59659fce6c491396de17dbc6db325db9/res/values-v14/values-v14.xml",
+                    "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/036e2546ddf01df5be4765b4216bf2f3/res/values-v14/values-v14.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

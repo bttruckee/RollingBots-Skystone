@@ -12,6 +12,8 @@ import java.util.HashMap;
 
 public class Annika
 {
+    //Speed of the arm to lock its position
+    private static final double LOCKED_SPEED = 0;
     //Declaraton of the hardwaremap object
     private HardwareMap hwMap;
 
@@ -43,8 +45,11 @@ public class Annika
     //Defines the lock to pull the build site
     private Servo groundLock;
 
+    //Whether or not the arm is locked in position
+    private boolean armLocked;
+
     public Annika()
-    {}
+    { armLocked = false; }
 
     public void init(HardwareMap hwMap)
     {
@@ -138,6 +143,25 @@ public class Annika
         rightFront.setPower(rightFrontPower);
         leftRear.setPower(leftRearPower);
         rightRear.setPower(rightRearPower);
+    }
+
+    /**
+     * Moves the arm up and down
+     *
+     * @param spd Speed the arm moves
+     */
+    public void moveArm(double spd)
+    {
+        if(!armLocked)
+            arm.setPower(spd);
+        else
+            arm.setPower(LOCKED_SPEED);
+    }
+
+    //Reverses locked state of the arm being locked
+    public void lockArm()
+    {
+        armLocked = !armLocked;
     }
 
     /**
