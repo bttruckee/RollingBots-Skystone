@@ -95,7 +95,7 @@ public class MotorTest extends OpMode
         Wheel Motor Test
         left front, right front, left rear, right rear
          */
-        jack.testWheels(gamepad1.left_stick_y, gamepad1.right_stick_y, gamepad1.left_trigger, gamepad1.right_trigger);
+        jack.testWheels(-gamepad1.left_stick_y, -gamepad1.right_stick_y, gamepad1.left_trigger, gamepad1.right_trigger);
 
         // Show the elapsed game time and wheel power.
         telemetry.addData("Status", "Run Time: " + runtime.toString());

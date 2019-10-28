@@ -13,7 +13,7 @@ import java.util.HashMap;
 public class Annika
 {
     //Speed of the arm to lock its position
-    private static final double LOCKED_SPEED = 0;
+    private static final double LOCKED_SPEED = 1;
     //Declaraton of the hardwaremap object
     private HardwareMap hwMap;
 
@@ -39,6 +39,10 @@ public class Annika
 
     //Defines the motors and servos for the arm
     private DcMotor arm;
+
+    //An array of the servos
+    private Servo[] servos;
+
     private Servo wrist;
     private Servo finger;
 
@@ -55,6 +59,7 @@ public class Annika
     {
         //Define the arrays
         wheelPower = new double[4];
+        servos = new Servo[3];
 
         //Set hardwaremap to paramater
         this.hwMap = hwMap;
@@ -66,10 +71,11 @@ public class Annika
         rightRear = hwMap.get(DcMotor.class, "right_rear");
 
         arm = hwMap.get(DcMotor.class, "arm");
-        wrist = hwMap.get(Servo.class, "wrist");
-        finger = hwMap.get(Servo.class, "finger");
 
-        groundLock = hwMap.get(Servo.class, "ground_lock");
+        servos[Annika.ServoIndexes.get("wrist")] = hwMap.get(Servo.class, "wrist");
+        servos[Annika.ServoIndexes.get("finger")] = hwMap.get(Servo.class, "finger");
+
+        servos[Annika.ServoIndexes.get("groundLock")] = hwMap.get(Servo.class, "ground_lock");
 
         //Set motor directions
         leftFront.setDirection(DcMotor.Direction.REVERSE);
@@ -80,6 +86,11 @@ public class Annika
         arm.setDirection(DcMotor.Direction.FORWARD);
         wrist.setDirection((Servo.Direction.FORWARD));
         finger.setDirection(Servo.Direction.FORWARD);
+
+        leftFront.setPower(0);
+        leftRear.setPower(0);
+        rightFront.setPower(0);
+        rightRear.setPower(0);
     }
 
     /**
@@ -147,21 +158,40 @@ public class Annika
 
     /**
      * Moves the arm up and down
+     * Keeps the arm in place if the speed is 0
      *
      * @param spd Speed the arm moves
      */
     public void moveArm(double spd)
     {
-        if(!armLocked)
+        if(spd != 0)
+        {
+            lockArm(false);
             arm.setPower(spd);
+        }
         else
+        {
+            lockArm(true);
             arm.setPower(LOCKED_SPEED);
+        }
+
     }
 
     //Reverses locked state of the arm being locked
-    public void lockArm()
+    private void lockArm(boolean toLocked)
     {
-        armLocked = !armLocked;
+        if(armLocked != toLocked) {
+            armLocked = toLocked;
+
+            if (toLocked) {
+                arm.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+                arm.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+                arm.setTargetPosition(arm.getCurrentPosition());
+                arm.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+            } else {
+                arm.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+            }
+        }
     }
 
     /**
@@ -172,8 +202,8 @@ public class Annika
     public void setServo (int index, boolean isOpen)
     {
         if(isOpen)
-            finger.setPosition(SERVO_POSITIONS[index][0]);
+            servos[index].setPosition(SERVO_POSITIONS[index][0]);
         else
-            finger.setPosition(SERVO_POSITIONS[index][1]);
+            servos[index].setPosition(SERVO_POSITIONS[index][1]);
     }
 }
