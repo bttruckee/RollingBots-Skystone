@@ -1,4 +1,4 @@
-#Sun Oct 27 18:02:14 PDT 2019
+#Mon Nov 11 19:39:48 PST 2019
 base.0=/Users/jdickerman/StudioProjects/RollingBots-Skystone/TeamCode/build/intermediates/dex/debug/mergeDexDebug/out
 path.0=classes.dex
 renamed.0=classes.dex

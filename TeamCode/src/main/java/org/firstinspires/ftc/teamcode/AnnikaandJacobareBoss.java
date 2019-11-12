@@ -133,7 +133,8 @@ public class AnnikaandJacobareBoss extends OpMode
             jack.setServo(Annika.ServoIndexes.get("finger"), gamepad2.a);
         }
 
-        // Show the elapsed game time and wheel power.
+        // Show the elapsed game time and wheel power
+        telemetry.addData("GroundLock Position", jack.getServoPosition(Annika.ServoIndexes.get("groundLock")));
         telemetry.addData("Status", "Run Time: " + runtime.toString());
         telemetry.addData("Wheels", "forward (%.2f), backward (%.2f)", gamepad1.left_stick_y, gamepad1.right_stick_x, gamepad1.right_trigger - gamepad1.left_trigger);
         telemetry.addData("Arm", 0.5 * gamepad2.right_stick_y);
