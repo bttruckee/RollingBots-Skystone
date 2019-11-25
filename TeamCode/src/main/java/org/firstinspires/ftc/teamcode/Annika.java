@@ -90,6 +90,12 @@ public class Annika
         arm.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         arm.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
 
+        for(DcMotor motor: wheelMotors)
+        {
+            motor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+            motor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        }
+
         servos[Annika.ServoIndexes.get("groundLock")].setDirection(Servo.Direction.FORWARD);
 
         servos[Annika.ServoIndexes.get("wrist")].setDirection((Servo.Direction.FORWARD));
@@ -213,7 +219,7 @@ public class Annika
 
             if (toLocked) {
                 motor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-                motor.setTargetPosition(arm.getCurrentPosition());
+                motor.setTargetPosition(motor.getCurrentPosition());
                 motor.setMode(DcMotor.RunMode.RUN_TO_POSITION);
             } else {
                 motor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
