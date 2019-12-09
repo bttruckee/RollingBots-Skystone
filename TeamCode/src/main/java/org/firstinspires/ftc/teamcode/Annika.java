@@ -90,11 +90,11 @@ public class Annika
         arm.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         arm.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
 
-        /*for(DcMotor motor: wheelMotors)
+        for(DcMotor motor: wheelMotors)
         {
             motor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
             motor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-        }*/
+        }
 
         servos[Annika.ServoIndexes.get("groundLock")].setDirection(Servo.Direction.FORWARD);
 
@@ -207,6 +207,70 @@ public class Annika
     }
 
     /**
+     * Makes the wheels to travel a given distance in a given direction
+     * @param speed = the speed to set the wheels to
+     * @param direction = the direction the robot is travelling (0 = forward, 1 = turn, 2 = strafe)
+     * @param distance = how many inches the robot will travel
+     */
+    public void encoderDrive(double speed, int direction, double distance)
+    {
+        if(direction <= 2 && direction <= 0) {
+            int[] newPositions = new int[wheelMotors.length];
+
+            //Set the motor positions
+            for (int i = 0; i < wheelMotors.length; i++) {
+                if(direction == 0)
+                {
+                    newPositions[i] = wheelMotors[i].getCurrentPosition() + (int)(distance * Jacobie.COUNTS_PER_INCH);
+                }
+                else if(direction == 1)
+                {
+                    if (i % 2 == 0)
+                        newPositions[i] = wheelMotors[i].getCurrentPosition() + (int)(distance * Jacobie.COUNTS_PER_INCH);
+                    else
+                        newPositions[i] = wheelMotors[i].getCurrentPosition() - (int)(distance * Jacobie.COUNTS_PER_INCH);
+                }
+                else {
+                    if (i % 3 == 0)
+                        newPositions[i] = wheelMotors[i].getCurrentPosition() + (int)(distance * Jacobie.COUNTS_PER_INCH);
+                    else
+                        newPositions[i] = wheelMotors[i].getCurrentPosition() - (int)(distance * Jacobie.COUNTS_PER_INCH);
+                }
+            }
+
+            //Setting the motors to move
+            for(int m = 0; m < wheelMotors.length; m++)
+            {
+                wheelMotors[m].setTargetPosition(newPositions[m]);
+                wheelMotors[m].setPower(speed);
+                wheelMotors[m].setMode(DcMotor.RunMode.RUN_TO_POSITION);
+            }
+
+            while (motorsBusy())
+            { }
+
+            //Stop the motors and disable RUN_TO_POSITION
+            for(DcMotor motor: wheelMotors)
+            {
+                motor.setPower(0);
+                motor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+            }
+        }
+    }
+
+    private boolean motorsBusy()
+    {
+        for(DcMotor motor: wheelMotors)
+        {
+            if(motor.isBusy())
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
      * Activates/Deactivates the arm of the given motor
      *
      * @param motor the motor being called
@@ -216,14 +280,14 @@ public class Annika
     {
         if(armLocked != toLocked) {
             armLocked = toLocked;
-
+            motor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
             if (toLocked) {
-                motor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+                //motor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
                 motor.setTargetPosition(motor.getCurrentPosition());
                 motor.setMode(DcMotor.RunMode.RUN_TO_POSITION);
-            } else {
-                motor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-            }
+            } /*else {
+                //motor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+            }*/
         }
     }
 

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/jdickerman/StudioProjects/RollingBots-Skystone/TeamCode/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zu/values-zu.xml",
+            "outputFile": "/Users/jacobdickerman/Desktop/projects/Robotics/RollingBots-Skystone/TeamCode/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zu/values-zu.xml",
             "map": [
                 {
-                    "source": "/Users/jdickerman/.gradle/caches/transforms-2/files-2.1/e8774f8c9e37599168cd356411dbd206/res/values-zu/values-zu.xml",
+                    "source": "/Users/jacobdickerman/.gradle/caches/transforms-2/files-2.1/e25f7907cb146f184f8b34ae3473cfb0/res/values-zu/values-zu.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
