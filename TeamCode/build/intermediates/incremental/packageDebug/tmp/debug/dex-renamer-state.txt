@@ -1,4 +1,4 @@
-#Sun Dec 08 19:36:42 PST 2019
-base.0=/Users/jacobdickerman/Desktop/projects/Robotics/RollingBots-Skystone/TeamCode/build/intermediates/dex/debug/mergeDexDebug/out
+#Sun Dec 15 19:11:32 PST 2019
+base.0=/Users/jacobdickerman/Desktop/projects/Robotics/RollingBots-Skystone/TeamCode/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

@@ -65,6 +65,9 @@ import org.firstinspires.ftc.robotcontroller.external.samples.HardwarePushbot;
  */
 
 @Autonomous(name="Luigi Circuit", group="Pushbot")
+@Disabled
+
+//Encoders not working as intended, suspending code until functional
 public class Jacobie extends LinearOpMode {
 
     /* Declare OpMode members. */
@@ -87,7 +90,7 @@ public class Jacobie extends LinearOpMode {
          * Initialize the drive system variables.
          * The init() method of the hardware class does all the work here
          */
-        jack.init(hardwareMap);
+        /*jack.init(hardwareMap);
         telemetry.addData("Status", "Initialized");    //
         telemetry.update();
 
@@ -114,6 +117,6 @@ public class Jacobie extends LinearOpMode {
 
 
         telemetry.addData("Path", "Complete");
-        telemetry.update();
+        telemetry.update();*/
     }
 }

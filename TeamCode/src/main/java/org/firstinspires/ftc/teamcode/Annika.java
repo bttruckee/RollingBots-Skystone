@@ -37,7 +37,7 @@ public class Annika
         }
 
     //Defines the servo positions ([servo index (groundLock, wrist, finger)], [position (open/up, closed/down)]
-    private static final double[][] SERVO_POSITIONS = {{1.0, 0.5}, {1.0, 0.0}, {0.0, 0.5}};
+    private static final double[][] SERVO_POSITIONS = {{0.5, 1}, {1.0, 0.0}, {0.0, 0.5}};
 
     //Defines the motors and servos for the arm
     private DcMotor arm;
@@ -90,11 +90,13 @@ public class Annika
         arm.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         arm.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
 
+        //Encoders not working as intended, suspending code until functional
+        /*
         for(DcMotor motor: wheelMotors)
         {
             motor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
             motor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-        }
+        }*/
 
         servos[Annika.ServoIndexes.get("groundLock")].setDirection(Servo.Direction.FORWARD);
 
@@ -206,13 +208,14 @@ public class Annika
         }
     }
 
+    //Encoders not working as intended, suspending code until functional
     /**
      * Makes the wheels to travel a given distance in a given direction
      * @param speed = the speed to set the wheels to
      * @param direction = the direction the robot is travelling (0 = forward, 1 = turn, 2 = strafe)
      * @param distance = how many inches the robot will travel
      */
-    public void encoderDrive(double speed, int direction, double distance)
+    /*public void encoderDrive(double speed, int direction, double distance)
     {
         if(direction <= 2 && direction <= 0) {
             int[] newPositions = new int[wheelMotors.length];
@@ -256,7 +259,7 @@ public class Annika
                 motor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
             }
         }
-    }
+    }*/
 
     private boolean motorsBusy()
     {
@@ -268,6 +271,19 @@ public class Annika
             }
         }
         return false;
+    }
+
+    public void testEncoders(int motorIndex, int position)
+    {
+        wheelMotors[motorIndex].setTargetPosition(position);
+        wheelMotors[motorIndex].setPower(1);
+        wheelMotors[motorIndex].setMode(DcMotor.RunMode.RUN_TO_POSITION);
+
+        while (wheelMotors[motorIndex].isBusy())
+        { }
+
+        wheelMotors[motorIndex].setPower(0);
+        wheelMotors[motorIndex].setMode(DcMotor.RunMode.RUN_USING_ENCODER);
     }
 
     /**
@@ -294,6 +310,16 @@ public class Annika
     public double getServoPosition(int servo)
     {
         return servos[servo].getPosition();
+    }
+
+    /**
+     * Returns the position of the given wheel motor
+     * @param motorIndex index of motor in wheelMotor array
+     * @return the position of the encoder
+     */
+    public double getMotorPosition(int motorIndex)
+    {
+        return wheelMotors[motorIndex].getCurrentPosition();
     }
 
     /**
