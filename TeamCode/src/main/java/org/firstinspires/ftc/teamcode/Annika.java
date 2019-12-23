@@ -37,7 +37,7 @@ public class Annika
         }
 
     //Defines the servo positions ([servo index (groundLock, wrist, finger)], [position (open/up, closed/down)]
-    private static final double[][] SERVO_POSITIONS = {{0.5, 1}, {1.0, 0.0}, {0.0, 0.5}};
+    private static final double[][] SERVO_POSITIONS = {{0.5, 1}, {0.0, 1.0}, {0.5, 0.0}};
 
     //Defines the motors and servos for the arm
     private DcMotor arm;
@@ -91,12 +91,12 @@ public class Annika
         arm.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
 
         //Encoders not working as intended, suspending code until functional
-        /*
+
         for(DcMotor motor: wheelMotors)
         {
             motor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
             motor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-        }*/
+        }
 
         servos[Annika.ServoIndexes.get("groundLock")].setDirection(Servo.Direction.FORWARD);
 
