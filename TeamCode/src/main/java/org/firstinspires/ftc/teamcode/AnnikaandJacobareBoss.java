@@ -66,9 +66,12 @@ public class AnnikaandJacobareBoss extends OpMode
         //Define robot
         jack.init(hardwareMap);
 
-        //Zero out motors and servos
+        //Zero out motors and set servos to close
         jack.setForwardSpeed(0);
         jack.move();
+
+        jack.setServo(Annika.ServoIndexes.get("groundLock"),false);
+        jack.setServo(Annika.ServoIndexes.get("finger"),false);
 
         // Tell the driver that initialization is complete.
         telemetry.addData("Status", "Initialized");
@@ -119,12 +122,6 @@ public class AnnikaandJacobareBoss extends OpMode
         if(gamepad1.a || gamepad1.b)
         {
             jack.setServo(Annika.ServoIndexes.get("groundLock"), gamepad1.a);
-        }
-
-        //Sets the wrist servo
-        if(gamepad2.left_bumper || gamepad2.right_bumper)
-        {
-            jack.setServo(Annika.ServoIndexes.get("wrist"), gamepad2.left_bumper);
         }
 
         //Sets the finger servo

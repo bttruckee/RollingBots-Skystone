@@ -83,7 +83,6 @@ public class Anthonie_Timed extends LinearOpMode {
 
         jack.setServo(Annika.ServoIndexes.get("groundLock"), true); //Raise ground lock by default
         jack.setServo(Annika.ServoIndexes.get("finger"),false); //Lower the finger by default
-        jack.setServo(Annika.ServoIndexes.get("wrist"),false); //Bring hand in by default
 
         // Send telemetry message to signify robot waiting;
         telemetry.addData("Status", "Ready to run");    //

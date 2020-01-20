@@ -81,7 +81,6 @@ public class Annikobie_Timed extends LinearOpMode {
 
         jack.setServo(Annika.ServoIndexes.get("groundLock"), true); //Raise ground lock by default
         jack.setServo(Annika.ServoIndexes.get("finger"),false); //Lower the finger by default
-        jack.setServo(Annika.ServoIndexes.get("wrist"),false); //Bring hand in by default
 
         // Send telemetry message to signify robot waiting;
         telemetry.addData("Status", "Ready to run");    //
@@ -91,6 +90,9 @@ public class Annikobie_Timed extends LinearOpMode {
         waitForStart();
 
         // Step through each leg of the path, ensuring that the Auto mode has not been stopped along the way
+
+        //Step 0: Raise the finger servo
+        jack.setServo(Annika.ServoIndexes.get("finger"),true);
 
         // Step 1:  Drive backward for 0.5 second
         jack.setForwardSpeed(-FORWARD_SPEED);

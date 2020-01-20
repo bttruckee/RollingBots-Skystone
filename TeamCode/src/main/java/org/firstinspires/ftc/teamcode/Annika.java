@@ -28,28 +28,24 @@ public class Annika
     //Defines the wheel power array
     private double[] wheelPower;
 
+    //The constant the rear wheels are multiplied by when strafing (to prevent oversteer)
+    private final double strafeMultiplier = 0.2;
+
     //Defines hashmap to get servo indexes
     public static final HashMap<String, Integer> ServoIndexes = new HashMap<String, Integer>();
         static{
             ServoIndexes.put("groundLock", 0);
-            ServoIndexes.put("wrist", 1);
-            ServoIndexes.put("finger", 2);
+            ServoIndexes.put("finger", 1);
         }
 
     //Defines the servo positions ([servo index (groundLock, wrist, finger)], [position (open/up, closed/down)]
-    private static final double[][] SERVO_POSITIONS = {{0.5, 1}, {0.0, 1.0}, {0.5, 0.0}};
+    private static final double[][] SERVO_POSITIONS = {{0.5, 1}, {0.5, 0.0}};
 
     //Defines the motors and servos for the arm
     private DcMotor arm;
 
-    //An array of the servos
+    //An array of the servos (groundLock and finger)
     private Servo[] servos;
-
-    private Servo wrist;
-    private Servo finger;
-
-    //Defines the lock to pull the build site
-    private Servo groundLock;
 
     //Whether or not the arm is locked in position
     private boolean armLocked;
@@ -62,9 +58,9 @@ public class Annika
         //Define the arrays
         wheelMotors = new DcMotor[4];
         wheelPower = new double[4];
-        servos = new Servo[3];
+        servos = new Servo[2];
 
-        //Set hardwaremap to paramater
+        //Set hardwaremap to parameter
         this.hwMap = hwMap;
 
         //Set motor/servo variables to motors/servos in hwMap
@@ -77,7 +73,6 @@ public class Annika
 
         servos[Annika.ServoIndexes.get("groundLock")] = hwMap.get(Servo.class, "ground_lock");
 
-        servos[Annika.ServoIndexes.get("wrist")] = hwMap.get(Servo.class, "wrist");
         servos[Annika.ServoIndexes.get("finger")] = hwMap.get(Servo.class, "finger");
 
         //Set motor directions
@@ -100,8 +95,7 @@ public class Annika
 
         servos[Annika.ServoIndexes.get("groundLock")].setDirection(Servo.Direction.FORWARD);
 
-        servos[Annika.ServoIndexes.get("wrist")].setDirection((Servo.Direction.FORWARD));
-        servos[Annika.ServoIndexes.get("finger")].setDirection(Servo.Direction.FORWARD);
+        servos[Annika.ServoIndexes.get("finger")].setDirection(Servo.Direction.REVERSE);
 
         wheelMotors[0].setPower(0);
         wheelMotors[1].setPower(0);
@@ -110,7 +104,6 @@ public class Annika
 
         servos[Annika.ServoIndexes.get("groundLock")].setPosition(SERVO_POSITIONS[Annika.ServoIndexes.get("groundLock")][0]);
 
-        servos[Annika.ServoIndexes.get("wrist")].setPosition(SERVO_POSITIONS[Annika.ServoIndexes.get("wrist")][0]);
         servos[Annika.ServoIndexes.get("finger")].setPosition(SERVO_POSITIONS[Annika.ServoIndexes.get("finger")][0]);
     }
 
@@ -156,6 +149,11 @@ public class Annika
                 wheelPower[i] = spd;
             else
                 wheelPower[i] = -spd;
+
+            if(i < 2)
+            {
+                wheelPower[i] = wheelPower[i] * strafeMultiplier;
+            }
         }
     }
 
@@ -324,7 +322,7 @@ public class Annika
 
     /**
      *
-     * @param index = the index of the applied servo (0 = groundLock, 1 = wrist, 2 = finger)
+     * @param index = the index of the applied servo (ServoIndexes.get("Name"));
      * @param isOpen = whether or not the servo is in the "open" position
      */
     public void setServo (int index, boolean isOpen)
