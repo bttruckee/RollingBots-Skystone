@@ -54,9 +54,9 @@ import com.qualcomm.robotcore.util.ElapsedTime;
  * Remove or comment out the @Disabled line to add this opmode to the Driver Station OpMode list
  */
 
-//Position: Red Build Site
+//Position: Blue Build Site
 
-@Autonomous(name="Mario Circuit", group="Pushbot")
+@Autonomous(name="Luigi Raceway", group="Pushbot")
 public class Annikobie_Timed extends LinearOpMode {
 
     /* Declare OpMode members. */
@@ -83,6 +83,7 @@ public class Annikobie_Timed extends LinearOpMode {
         jack.setServo(Annika.ServoIndexes.get("finger"),false); //Lower the finger by default
 
         // Send telemetry message to signify robot waiting;
+        telemetry.addData("Position", "Blue Build Site");
         telemetry.addData("Status", "Ready to run");    //
         telemetry.update();
 
