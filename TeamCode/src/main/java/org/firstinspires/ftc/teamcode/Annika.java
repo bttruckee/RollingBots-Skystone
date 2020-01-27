@@ -162,7 +162,7 @@ public class Annika
     {
         for(int i = 0; i < wheelMotors.length; i++)
         {
-            /*if(wheelPower[i] != 0)
+            if(wheelPower[i] != 0)
             {
                 lockMotor(wheelMotors[i],false);
                 wheelMotors[i].setPower(wheelPower[i]);
@@ -171,8 +171,8 @@ public class Annika
             {
                 lockMotor(wheelMotors[i],true);
                 wheelMotors[i].setPower(LOCKED_SPEED);
-            }*/
-            wheelMotors[i].setPower(wheelPower[i]);
+            }
+            //wheelMotors[i].setPower(wheelPower[i]);
         }
     }
 
@@ -295,13 +295,11 @@ public class Annika
         if(armLocked != toLocked) {
             armLocked = toLocked;
             motor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-            if (toLocked) {
-                //motor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+            if (toLocked)
+            {
                 motor.setTargetPosition(motor.getCurrentPosition());
                 motor.setMode(DcMotor.RunMode.RUN_TO_POSITION);
-            } /*else {
-                //motor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-            }*/
+            }
         }
     }
 
