@@ -63,9 +63,12 @@ public class MotorTest extends OpMode
         //Define robot
         jack.init(hardwareMap);
 
-        //Zero out motors and servos
+        //Zero out motors and set servos to close
         jack.setForwardSpeed(0);
         jack.move();
+
+        jack.setServo(Annika.ServoIndexes.get("groundLock"),false);
+        jack.setServo(Annika.ServoIndexes.get("finger"),false);
 
         // Tell the driver that initialization is complete.
         telemetry.addData("Status", "Initialized");
@@ -96,10 +99,12 @@ public class MotorTest extends OpMode
         left front, right front, left rear, right rear
          */
         jack.testWheels(-gamepad1.left_stick_y, -gamepad1.right_stick_y, gamepad1.left_trigger, gamepad1.right_trigger);
+        jack.move();
 
         // Show the elapsed game time and wheel power.
         telemetry.addData("Status", "Run Time: " + runtime.toString());
-        telemetry.addData("Motors", "forward (%.2f), backward (%.2f)", gamepad1.left_stick_y, gamepad1.right_stick_x, gamepad1.right_trigger - gamepad1.left_trigger);
+        telemetry.addData("Front Motors", "Left Front (%.2f), Right Front (%.2f)", gamepad1.left_stick_y, gamepad1.right_stick_x);
+        telemetry.addData("Rear Motors", "Left Rear (%.2f), Right Rear (%.2f)", gamepad1.left_trigger, gamepad1.right_trigger);
     }
 
     /*
