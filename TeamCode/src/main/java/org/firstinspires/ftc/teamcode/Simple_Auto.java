@@ -62,7 +62,7 @@ public class Simple_Auto extends LinearOpMode {
     private ElapsedTime     runtime = new ElapsedTime();
 
 
-    static final double     FORWARD_SPEED = 0.6;
+    static final double     FORWARD_SPEED = 0.75;
     static final double     TURN_SPEED    = 0.5;
     static final double     STRAFE_SPEED  = 0.6;
 
@@ -81,6 +81,7 @@ public class Simple_Auto extends LinearOpMode {
         jack.setServo(Annika.ServoIndexes.get("finger"),false); //Lower the finger by default
 
         // Send telemetry message to signify robot waiting;
+        telemetry.addData("Position", "One Away from Skybridge");
         telemetry.addData("Status", "Ready to run");    //
         telemetry.update();
 
@@ -92,11 +93,11 @@ public class Simple_Auto extends LinearOpMode {
         //Step 0: Raise the finger servo
         jack.setServo(Annika.ServoIndexes.get("finger"),true);
 
-        // Step 1:  Drive Forward for 0.5 second
+        // Step 1:  Drive Forward for 2 seconds
         jack.setForwardSpeed(FORWARD_SPEED);
         jack.move();
         runtime.reset();
-        while (opModeIsActive() && (runtime.seconds() < 1)) {
+        while (opModeIsActive() && (runtime.seconds() < 2)) {
             telemetry.addData("Path", "Leg 1: %2.5f S Elapsed", runtime.seconds());
             telemetry.update();
         }

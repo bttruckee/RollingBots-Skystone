@@ -64,7 +64,7 @@ public class Annikobie_Timed extends LinearOpMode {
     private ElapsedTime     runtime = new ElapsedTime();
 
 
-    static final double     FORWARD_SPEED = 0.6;
+    static final double     FORWARD_SPEED = 0.7;
     static final double     TURN_SPEED    = 0.5;
     static final double     STRAFE_SPEED  = 0.6;
 
@@ -92,47 +92,44 @@ public class Annikobie_Timed extends LinearOpMode {
 
         // Step through each leg of the path, ensuring that the Auto mode has not been stopped along the way
 
-        //Step 0: Raise the finger servo
-        jack.setServo(Annika.ServoIndexes.get("finger"),true);
-
-        // Step 1:  Drive backward for 0.5 second
+        // Step 1:  Drive backward for 1 second
         jack.setForwardSpeed(-FORWARD_SPEED);
         jack.move();
         runtime.reset();
-        while (opModeIsActive() && (runtime.seconds() < 0.5)) {
+        while (opModeIsActive() && (runtime.seconds() < 1.0)) {
             telemetry.addData("Path", "Leg 1: %2.5f S Elapsed", runtime.seconds());
             telemetry.update();
         }
 
-        // Step 2:  Strafe Right for 1 Second
+        // Step 2:  Strafe Right for 2 Seconds
         jack.setStrafeSpeed(-STRAFE_SPEED);
         jack.move();
         runtime.reset();
-        while (opModeIsActive() && (runtime.seconds() < 1.0)) {
+        while (opModeIsActive() && (runtime.seconds() < 2)) {
             telemetry.addData("Path", "Leg 3: %2.5f S Elapsed", runtime.seconds());
             telemetry.update();
         }
 
-        // Step 3:  Drive backward for 1 second
+        // Step 3:  Drive backward for 1.5 second
         jack.setForwardSpeed(-FORWARD_SPEED);
         jack.move();
         runtime.reset();
-        while (opModeIsActive() && (runtime.seconds() < 1.0)) {
+        while (opModeIsActive() && (runtime.seconds() < 1.5)) {
             telemetry.addData("Path", "Leg 1: %2.5f S Elapsed", runtime.seconds());
             telemetry.update();
         }
 
-        //Step 4: Lower the groundlock servo
+        //Step 4: Stop and Lower the groundlock servo
         jack.setForwardSpeed(0);
         jack.move();
         jack.setServo(Annika.ServoIndexes.get("groundLock"), false);
         sleep (1000); //Pause for servo movement
 
-        // Step 5:  Drive forward for 2 seconds
+        // Step 5:  Drive forward for 1.7 seconds
         jack.setForwardSpeed(FORWARD_SPEED);
         jack.move();
         runtime.reset();
-        while (opModeIsActive() && (runtime.seconds() < 2)) {
+        while (opModeIsActive() && (runtime.seconds() < 2.5)) {
             telemetry.addData("Path", "Leg 2: %2.5f S Elapsed", runtime.seconds());
             telemetry.update();
         }
@@ -143,16 +140,29 @@ public class Annikobie_Timed extends LinearOpMode {
         jack.setServo(Annika.ServoIndexes.get("groundLock"), true);
         sleep (1000); //Pause for servo movement
 
-        // Step 7:  Strafe Left for 4 Seconds
+        //Step 7: Drive forward slightly to straighten off then drive back slightly to separate from the wall
+        jack.setForwardSpeed(FORWARD_SPEED);
+        jack.move();
+        while (opModeIsActive() && (runtime.seconds() < 0.2)) {
+            telemetry.addData("Path", "Leg 2: %2.5f S Elapsed", runtime.seconds());
+            telemetry.update();
+        }
+        jack.setForwardSpeed(-FORWARD_SPEED);
+        while (opModeIsActive() && (runtime.seconds() < 0.05)) {
+            telemetry.addData("Path", "Leg 2: %2.5f S Elapsed", runtime.seconds());
+            telemetry.update();
+        }
+
+        // Step 8:  Strafe Left for 5 Seconds
         jack.setStrafeSpeed(STRAFE_SPEED);
         jack.move();
         runtime.reset();
-        while (opModeIsActive() && (runtime.seconds() < 4)) {
+        while (opModeIsActive() && (runtime.seconds() < 5)) {
             telemetry.addData("Path", "Leg 3: %2.5f S Elapsed", runtime.seconds());
             telemetry.update();
         }
 
-        // Step 8:  Stop
+        // Step 9:  Stop
         jack.setForwardSpeed(0);
         jack.move();
 

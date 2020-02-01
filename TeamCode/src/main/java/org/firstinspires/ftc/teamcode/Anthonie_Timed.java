@@ -30,6 +30,7 @@
 package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
@@ -57,7 +58,7 @@ import java.util.FormatFlagsConversionMismatchException;
  */
 
 //Position: Blue Loading Zone (Red Team)
-
+@Disabled
 @Autonomous(name="Mushroom Gorge", group="Pushbot")
 public class Anthonie_Timed extends LinearOpMode {
 
